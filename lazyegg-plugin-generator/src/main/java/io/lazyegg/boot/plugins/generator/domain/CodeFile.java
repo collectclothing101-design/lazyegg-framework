@@ -52,7 +52,7 @@ public class CodeFile implements Serializable {
     /**
      * 包名
      *
-     * @return
+     * @return 包名
      */
     public String packageName() {
         return LeggJavaCodeUtil.parsePackageName(sw.toString());
@@ -61,7 +61,7 @@ public class CodeFile implements Serializable {
     /**
      * 包路径
      *
-     * @return
+     * @return 包路径
      */
     public String packagePath() {
         return packageName().replaceAll("\\.", File.separator);
@@ -71,7 +71,7 @@ public class CodeFile implements Serializable {
     /**
      * 类名
      *
-     * @return
+     * @return 类名
      */
     public String className() {
         return LeggJavaCodeUtil.parseClassName(sw.toString());
@@ -80,7 +80,7 @@ public class CodeFile implements Serializable {
     /**
      * 文件名  Aaa.java
      *
-     * @return
+     * @return 文件名
      */
     public String fileName() {
         return String.join(".", className(), "java");
@@ -89,7 +89,7 @@ public class CodeFile implements Serializable {
     /**
      * 文件全名  xxx/yyy/Aaa.java
      *
-     * @return
+     * @return 文件全名
      */
     public String fileFullName() {
         return String.join(File.separator, packagePath(), fileName());
@@ -98,7 +98,7 @@ public class CodeFile implements Serializable {
     /**
      * 获取绝对路径
      *
-     * @return
+     * @return 绝对路径
      */
     public String absolutePath() {
         return String.join(File.separator, absolute(), fileFullName());
@@ -117,11 +117,10 @@ public class CodeFile implements Serializable {
     /**
      * 获取绝对包路径
      *
-     * @return
+     * @return 绝对包路径
      */
     public String absolutePackagePath() {
         return String.join(File.separator, absolute(),
                 packagePath());
     }
 }
-
