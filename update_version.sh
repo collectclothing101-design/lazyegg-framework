@@ -1,6 +1,10 @@
 #!/bin/bash
 
-MVN_EXEC=./mvnw        # mvnw 文件路径
+# 获取脚本所在目录的绝对路径
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# 定义 mvnw 文件路径
+MVN_EXEC="${SCRIPT_DIR}/mvnw"
 MVN_PARAMS='versions:set -DnewVersion='   # Maven 版本管理插件参数
 
 # 获取当前项目版本号
@@ -18,9 +22,12 @@ if [[ ! ${NEW_VERSION} =~ ^[[:alnum:].-]+$ ]]; then
     exit 1
 fi
 
+cd './lazyegg-sonatype'
+
 # 使用 Maven Wrapper 命令更新版本号
 ${MVN_EXEC} ${MVN_PARAMS}${NEW_VERSION}
 
+cd ..
 # 提交修改
 ${MVN_EXEC} versions:commit
 
