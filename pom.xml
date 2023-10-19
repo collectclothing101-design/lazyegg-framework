@@ -25,7 +25,6 @@
         <module>lazyegg-swagger</module>
         <module>lazyegg-api-sdk</module>
         <module>lazyegg-component</module>
-        <module>lazyegg-sonatype</module>
     </modules>
 
     <properties>
