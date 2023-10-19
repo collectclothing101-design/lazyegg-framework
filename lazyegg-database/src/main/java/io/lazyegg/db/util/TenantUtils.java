@@ -16,7 +16,7 @@ public class TenantUtils {
     /**
      * TODO 租户信息一般根据登录用户身份来判断
      *
-     * @return
+     * @return 租户id
      */
     public static long findUserTenant() {
         long userId = loginUserId();
@@ -30,7 +30,7 @@ public class TenantUtils {
     /**
      * 当前登录的用户id, 一般从Session中获取
      *
-     * @return
+     * @return 用户id
      */
     public static long loginUserId() {
         return 1L;

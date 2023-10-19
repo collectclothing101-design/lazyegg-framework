@@ -12,8 +12,8 @@ public class MyBatisPlusJoinConfig extends JoinDefaultSqlInjector {
 
     /**
      * @param mapperClass 当前mapper
-     * @param tableInfo
-     * @return
+     * @param tableInfo  表信息
+     * @return 方法列表
      */
     @Override
     public List<AbstractMethod> getMethodList(Class<?> mapperClass, TableInfo tableInfo) {

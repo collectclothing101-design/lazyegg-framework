@@ -11,14 +11,14 @@ public interface TenantService {
     /**
      * 获取多租户id
      *
-     * @return
+     * @return 租户id
      */
     long getTenantId();
 
     /**
      * 获取多租户字段名
      *
-     * @return
+     * @return 租户字段名
      */
     String getTenantColumnName();
 }
