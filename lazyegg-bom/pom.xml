@@ -16,16 +16,6 @@
     <name>lazyegg-bom</name>
     <description>lazyegg-bom</description>
 
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.sonatype.oss/oss-parent -->
-        <dependency>
-            <groupId>org.sonatype.oss</groupId>
-            <artifactId>oss-parent</artifactId>
-            <version>9</version>
-            <type>pom</type>
-        </dependency>
-    </dependencies>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
