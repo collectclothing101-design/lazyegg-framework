@@ -5,6 +5,7 @@
         <groupId>io.lazyegg</groupId>
         <artifactId>lazyegg-sonatype</artifactId>
         <version>1.0.2</version>
+        <relativePath/>
     </parent>
 
     <groupId>io.lazyegg</groupId>

@@ -22,13 +22,8 @@ if [[ ! ${NEW_VERSION} =~ ^[[:alnum:].-]+$ ]]; then
     exit 1
 fi
 
-cd './lazyegg-sonatype'
-
 # 使用 Maven Wrapper 命令更新版本号
 ${MVN_EXEC} ${MVN_PARAMS}${NEW_VERSION}
-
-cd ..
-# 提交修改
 ${MVN_EXEC} versions:commit
 
 # 打印新版本号
