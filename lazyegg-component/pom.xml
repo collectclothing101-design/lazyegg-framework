@@ -4,18 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lazyegg-component</artifactId>
-    <packaging>pom</packaging>
     <parent>
         <groupId>io.lazyegg</groupId>
         <artifactId>lazyegg-framework-parent</artifactId>
         <version>1.0.2</version>
     </parent>
 
-    <build>
-        <plugins>
-
-        </plugins>
-    </build>
+    <artifactId>lazyegg-component</artifactId>
+    <packaging>pom</packaging>
 
 </project>

@@ -4,8 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lazyegg-api-sdk</artifactId>
-
     <parent>
         <groupId>io.lazyegg</groupId>
         <artifactId>lazyegg-framework-parent</artifactId>
@@ -13,16 +11,19 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-<dependencies>
-    <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpclient</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>com.aliyun.oss</groupId>
-        <artifactId>aliyun-sdk-oss</artifactId>
-        <version>3.17.1</version>
-    </dependency>
-</dependencies>
+    <artifactId>lazyegg-api-sdk</artifactId>
+    <name>lazyegg-api-sdk</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.17.1</version>
+        </dependency>
+    </dependencies>
 
 </project>

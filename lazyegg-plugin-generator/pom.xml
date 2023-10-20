@@ -2,20 +2,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>io.lazyegg</groupId>
         <artifactId>lazyegg-framework-parent</artifactId>
         <version>1.0.2</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.lazyegg.plugin</groupId>
     <artifactId>lazyegg-plugin-generator</artifactId>
 
+    <name>lazyegg-plugin-generator</name>
+    <description>lazyegg-plugin-generator</description>
+
     <properties>
         <skip.springboot.maven>false</skip.springboot.maven>
-
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
