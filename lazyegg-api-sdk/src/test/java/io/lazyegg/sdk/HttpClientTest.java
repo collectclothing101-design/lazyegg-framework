@@ -64,7 +64,8 @@ public class HttpClientTest {
 
     @Test
     public void test3() {
-        DemoClient demoClient = new DemoClient("https://www.baidu.com", new DefaultCredentialsProvider("a", "a"), new ClientConfiguration());
+        DefaultCredentialsProvider credentialsProvider = new DefaultCredentialsProvider("a", "a");
+        DemoClient demoClient = new DemoClient("https://www.baidu.com", credentialsProvider, new ClientConfiguration());
         demoClient.demoSDKOperation().getUser();
     }
 
