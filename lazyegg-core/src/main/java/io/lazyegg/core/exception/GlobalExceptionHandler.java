@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.NestedRuntimeException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.HttpMessageConversionException;
+import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -22,6 +22,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+
+    @ExceptionHandler(value = {SysException.class})
+    public ResponseEntity<Object> sysException(SysException exception) {
+        log.error(exception.getMessage(), exception);
+        return new ResponseEntity<>(Response.buildFailure("500", "系统异常请联系管理员"), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 
     @ExceptionHandler(value = BizException.class)
     public ResponseEntity<Object> bizException(BizException exception) {
@@ -42,11 +48,14 @@ public class GlobalExceptionHandler {
         log.error(errMessage, exception);
         return new ResponseEntity<>(Response.buildFailure("500", errMessage), HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
-    @ExceptionHandler(value = {SysException.class, Exception.class})
-    public ResponseEntity<Object> sysException(Exception exception) {
-        log.error(exception.getMessage(), exception);
-        return new ResponseEntity<>(Response.buildFailure("500", "系统异常请联系管理员"), HttpStatus.INTERNAL_SERVER_ERROR);
+    @ExceptionHandler(ServletRequestBindingException.class)
+    public ResponseEntity<Object> servletRequestBindingException(ServletRequestBindingException exception) {
+        String message = exception.getMessage();
+        String errMessage = "参数异常-" + message;
+        log.error(errMessage, exception);
+        return new ResponseEntity<>(Response.buildFailure("500", errMessage), HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+
 
 }
