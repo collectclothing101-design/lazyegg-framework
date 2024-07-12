@@ -22,32 +22,32 @@
             <dependency>
                 <groupId>io.lazyegg</groupId>
                 <artifactId>lazyegg-core</artifactId>
-                <version>1.0.2</version>
+                <version>1.0.3</version>
             </dependency>
             <dependency>
                 <groupId>io.lazyegg</groupId>
                 <artifactId>lazyegg-database</artifactId>
-                <version>1.0.2</version>
+                <version>1.0.3</version>
             </dependency>
             <dependency>
                 <groupId>io.lazyegg</groupId>
                 <artifactId>lazyegg-auth</artifactId>
-                <version>1.0.2</version>
+                <version>1.0.3</version>
             </dependency>
             <dependency>
                 <groupId>io.lazyegg.plugin</groupId>
                 <artifactId>lazyegg-plugin-generator</artifactId>
-                <version>1.0.2</version>
+                <version>1.0.3</version>
             </dependency>
             <dependency>
                 <groupId>io.lazyegg</groupId>
                 <artifactId>lazyegg-swagger</artifactId>
-                <version>1.0.2</version>
+                <version>1.0.3</version>
             </dependency>
             <dependency>
                 <groupId>io.lazyegg</groupId>
                 <artifactId>lazyegg-tenant</artifactId>
-                <version>1.0.2</version>
+                <version>1.0.3</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

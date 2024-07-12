@@ -7,7 +7,7 @@
     <parent>
         <groupId>io.lazyegg</groupId>
         <artifactId>lazyegg-framework-parent</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </parent>
 
     <artifactId>lazyegg-component</artifactId>

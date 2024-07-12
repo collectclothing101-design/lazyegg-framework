@@ -11,7 +11,7 @@
     <groupId>io.lazyegg</groupId>
     <artifactId>lazyegg-framework-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <name>lazyegg-framework</name>
     <description>Lazyegg Framework</description>
 
