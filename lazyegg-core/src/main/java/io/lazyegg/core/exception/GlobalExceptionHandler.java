@@ -26,13 +26,13 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = {SysException.class})
     public ResponseEntity<Object> sysException(SysException exception) {
         log.error(exception.getMessage(), exception);
-        return new ResponseEntity<>(Response.buildFailure("500", "系统异常请联系管理员"), HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(Response.buildFailure("500", "系统异常请联系管理员"), HttpStatus.OK);
     }
 
     @ExceptionHandler(value = BizException.class)
     public ResponseEntity<Object> bizException(BizException exception) {
         log.error(exception.getMessage(), exception);
-        return new ResponseEntity<>(Response.buildFailure("400", exception.getMessage()), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(Response.buildFailure("400", exception.getMessage()), HttpStatus.OK);
     }
 
     /**
