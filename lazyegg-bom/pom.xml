@@ -6,16 +6,37 @@
     <parent>
         <groupId>io.lazyegg</groupId>
         <artifactId>lazyegg-sonatype</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
         <relativePath/>
     </parent>
 
     <groupId>io.lazyegg</groupId>
     <artifactId>lazyegg-bom</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>pom</packaging>
     <name>lazyegg-bom</name>
     <description>lazyegg-bom</description>
+    <url>https://github.com/nsmeng3/lazyegg-framework/tree/main/lazyegg-bom</url>
+    <!-- 开发人员信息 -->
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <!-- <distribution>repo</distribution> -->
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:https://github.com/nsmeng3/lazyegg-framework.git</connection>
+        <developerConnection>scm:https://github.com/nsmeng3/lazyegg-framework.git</developerConnection>
+        <url>https://github.com/nsmeng3/lazyegg-framework.git</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>DifferentW</name>
+            <email>dev@lazyegg.io</email>
+            <organizationUrl>https://github.com/nsmeng3</organizationUrl>
+        </developer>
+    </developers>
 
     <dependencyManagement>
         <dependencies>

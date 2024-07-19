@@ -16,7 +16,28 @@
 
     <name>lazyegg-plugin-generator</name>
     <description>lazyegg-plugin-generator</description>
-
+    <url>https://github.com/nsmeng3/lazyegg-framework/tree/main/lazyegg-plugin-generator</url>
+    <!-- 开发人员信息 -->
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <!-- <distribution>repo</distribution> -->
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:https://github.com/nsmeng3/lazyegg-framework.git</connection>
+        <developerConnection>scm:https://github.com/nsmeng3/lazyegg-framework.git</developerConnection>
+        <url>https://github.com/nsmeng3/lazyegg-framework.git</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>DifferentW</name>
+            <email>dev@lazyegg.io</email>
+            <organization>https://github.com/nsmeng3</organization>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
     <properties>
         <skip.springboot.maven>false</skip.springboot.maven>
         <maven.compiler.source>8</maven.compiler.source>
@@ -28,10 +49,12 @@
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
+            <version>${velocity-engine-core.version}</version>
         </dependency>
         <dependency>
             <groupId>io.lazyegg</groupId>
             <artifactId>lazyegg-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

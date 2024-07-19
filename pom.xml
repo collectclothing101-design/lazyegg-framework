@@ -1,12 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>io.lazyegg</groupId>
-        <artifactId>lazyegg-sonatype</artifactId>
-        <version>1.0.2</version>
-        <relativePath/>
-    </parent>
 
     <groupId>io.lazyegg</groupId>
     <artifactId>lazyegg-framework-parent</artifactId>
@@ -14,10 +8,30 @@
     <version>1.0.3</version>
     <name>lazyegg-framework</name>
     <description>Lazyegg Framework</description>
+    <url>https://github.com/nsmeng3/lazyegg-framework.git</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:https://github.com/nsmeng3/lazyegg-framework.git</connection>
+        <developerConnection>scm:https://github.com/nsmeng3/lazyegg-framework.git</developerConnection>
+        <url>https://github.com/nsmeng3/lazyegg-framework.git</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>DifferentW</name>
+            <email>dev@lazyegg.io</email>
+            <organization>https://github.com/nsmeng3</organization>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
 
     <modules>
-        <module>lazyegg-bom</module>
-        <module>lazyegg-dependencies</module>
         <module>lazyegg-plugin-generator</module>
         <module>lazyegg-core</module>
         <module>lazyegg-database</module>
@@ -25,7 +39,6 @@
         <module>lazyegg-auth</module>
         <module>lazyegg-swagger</module>
         <module>lazyegg-api-sdk</module>
-        <module>lazyegg-component</module>
     </modules>
 
     <properties>
@@ -36,20 +49,62 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.test.skip>true</maven.test.skip>
+
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <spring-boot.version>2.7.18</spring-boot.version>
+        <spring-security.version>5.7.11</spring-security.version>
+        <commons-io.version>2.13.0</commons-io.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
+        <spring-boot.version>2.7.18</spring-boot.version>
+        <spring-cloud.version>2020.0.6</spring-cloud.version>
+        <cola.version>4.3.0</cola.version>
+        <cola.components.version>4.3.1</cola.components.version>
+        <kryo.version>5.3.0</kryo.version>
+        <jasypt.version>3.0.4</jasypt.version>
+        <nacos.version>2.1.0</nacos.version>
+        <fastjson.version>2.0.21</fastjson.version>
+        <log4j.version>2.19.0</log4j.version>
+        <mybatis.plus.boot.starter.version>3.5.2</mybatis.plus.boot.starter.version>
+        <fluent-mybatis.version>1.9.8</fluent-mybatis.version>
+        <spring.boot.admin.version>2.7.4</spring.boot.admin.version>
+        <reflections.version>0.9.10</reflections.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <jose-jwt.version>9.26</jose-jwt.version>
+        <cola.version>4.3.0</cola.version>
+        <druid.version>1.2.15</druid.version>
+        <mybatis.plus.boot.starter.version>3.5.3.1</mybatis.plus.boot.starter.version>
+        <fluent-mybatis.version>1.9.8</fluent-mybatis.version>
+        <fastjson.version>2.0.21.graal</fastjson.version>
+        <querydsl.version>5.0.0</querydsl.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
+        <hutool.version>5.8.20</hutool.version>
+        <dameng.version>8.1.2.192</dameng.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
+        <commons-io.version>2.13.0</commons-io.version>
+        <mybatis-plus-join.version>1.3.3</mybatis-plus-join.version>
+        <mysql.version>8.0.30</mysql.version>
+        <velocity-engine-core.version>2.3</velocity-engine-core.version>
+        <knife4j-openapi2.version>4.0.0</knife4j-openapi2.version>
+        <guava-retrying.version>2.0.0</guava-retrying.version>
+        <jasypt-spring-boot-starter.version>2.1.2</jasypt-spring-boot-starter.version>
+        <httpclient.version>4.5.14</httpclient.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -70,10 +125,12 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
         </dependency>
 
         <dependency>
@@ -88,7 +145,7 @@
             <dependency>
                 <groupId>io.lazyegg</groupId>
                 <artifactId>lazyegg-dependencies</artifactId>
-                <version>1.0.2</version>
+                <version>1.0.3</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -97,7 +154,97 @@
                 <artifactId>snakeyaml</artifactId>
                 <version>2.0</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.5.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <autoPublish>false</autoPublish>
+                    <waitUntil>validated</waitUntil>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <configuration>
+                    <show>private</show>
+                    <nohelp>true</nohelp>
+                    <charset>UTF-8</charset>
+                    <encoding>UTF-8</encoding>
+                    <docencoding>UTF-8</docencoding>
+                    <!-- TODO 临时解决不规范的javadoc生成报错,后面要规范化后把这行去掉 -->
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- <plugin> -->
+            <!--     <groupId>org.apache.maven.plugins</groupId> -->
+            <!--     <artifactId>maven-compiler-plugin</artifactId> -->
+            <!--     <version>3.5.1</version> -->
+            <!--     <configuration> -->
+            <!--         <source>${java.version}</source> -->
+            <!--         <target>${java.version}</target> -->
+            <!--         <testSource>${java.version}</testSource> -->
+            <!--         <testTarget>${java.version}</testTarget> -->
+            <!--     </configuration> -->
+            <!-- </plugin> -->
+        </plugins>
+    </build>
 </project>

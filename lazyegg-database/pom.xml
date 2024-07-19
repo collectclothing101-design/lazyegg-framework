@@ -13,7 +13,28 @@
 
     <artifactId>lazyegg-database</artifactId>
     <name>lazyegg-database</name>
-
+    <description>lazyegg-database</description>
+    <url>https://github.com/nsmeng3/lazyegg-framework/tree/main/lazyegg-database</url>
+    <!-- 开发人员信息 -->
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:https://github.com/nsmeng3/lazyegg-framework.git</connection>
+        <developerConnection>scm:https://github.com/nsmeng3/lazyegg-framework.git</developerConnection>
+        <url>https://github.com/nsmeng3/lazyegg-framework.git</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>DifferentW</name>
+            <email>dev@lazyegg.io</email>
+            <organization>https://github.com/nsmeng3</organization>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -23,66 +44,79 @@
         <dependency>
             <groupId>io.lazyegg</groupId>
             <artifactId>lazyegg-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis.plus.boot.starter.version}</version>
         </dependency>
         <dependency>
             <groupId>icu.mhb</groupId>
             <artifactId>mybatis-plus-join</artifactId>
+            <version>${mybatis-plus-join.version}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
         <!-- 达梦 -->
         <dependency>
             <groupId>com.dameng</groupId>
             <artifactId>DmJdbcDriver18</artifactId>
+            <version>${dameng.version}</version>
         </dependency>
         <dependency>
             <groupId>com.dameng</groupId>
             <artifactId>DmDialect-for-hibernate5.6</artifactId>
+            <version>${dameng.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <!-- cola 框架依赖 -->
         <dependency>
             <groupId>com.alibaba.cola</groupId>
             <artifactId>cola-component-exception</artifactId>
+            <version>${cola.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-        </dependency>
+        <!-- <dependency> -->
+        <!--     <groupId>com.fasterxml.jackson.core</groupId> -->
+        <!--     <artifactId>jackson-annotations</artifactId> -->
+        <!--     <version></version> -->
+        <!-- </dependency> -->
+        <!-- <dependency> -->
+        <!--     <groupId>com.fasterxml.jackson.core</groupId> -->
+        <!--     <artifactId>jackson-databind</artifactId> -->
+        <!-- </dependency> -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.springframework</groupId> -->
+        <!--     <artifactId>spring-web</artifactId> -->
+        <!-- </dependency> -->
         <!-- querydsl 依赖 -->
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-apt</artifactId>
+            <version>${querydsl.version}</version>
         </dependency>
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-jpa</artifactId>
+            <version>${querydsl.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
 
     </dependencies>

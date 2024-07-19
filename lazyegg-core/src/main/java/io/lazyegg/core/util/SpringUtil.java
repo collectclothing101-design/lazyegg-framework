@@ -25,11 +25,10 @@ public class SpringUtil implements ApplicationContextAware {
      */
     @Getter
     private static ApplicationContext applicationContext = null;
+
     /**
      * -- GETTER --
      *  获取环境变量
-     *
-     * @return Environment
      */
     @Getter
     private static Environment environment = null;

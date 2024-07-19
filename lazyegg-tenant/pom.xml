@@ -11,11 +11,34 @@
 
     <artifactId>lazyegg-tenant</artifactId>
     <name>lazyegg-tenant</name>
-
+    <description>tenant</description>
+    <url>https://github.com/nsmeng3/lazyegg-framework/tree/main/lazyegg-tenant</url>
+    <!-- 开发人员信息 -->
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <!-- <distribution>repo</distribution> -->
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:https://github.com/nsmeng3/lazyegg-framework.git</connection>
+        <developerConnection>scm:https://github.com/nsmeng3/lazyegg-framework.git</developerConnection>
+        <url>https://github.com/nsmeng3/lazyegg-framework.git</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>DifferentW</name>
+            <email>dev@lazyegg.io</email>
+            <organization>https://github.com/nsmeng3</organization>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
     <dependencies>
         <dependency>
             <groupId>io.lazyegg</groupId>
             <artifactId>lazyegg-database</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

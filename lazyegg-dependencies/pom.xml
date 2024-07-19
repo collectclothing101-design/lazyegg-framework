@@ -3,20 +3,34 @@
          http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>io.lazyegg</groupId>
-    <artifactId>lazyegg-sonatype</artifactId>
-    <version>1.0.2</version>
-    <relativePath/>
-  </parent>
-
   <groupId>io.lazyegg</groupId>
   <artifactId>lazyegg-dependencies</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>pom</packaging>
   <name>lazyegg-boot-dependencies</name>
   <description>Lazyegg Boot Dependencies</description>
-
+  <url>https://github.com/nsmeng3/lazyegg-framework/tree/main/lazyegg-dependencies</url>
+  <!-- 开发人员信息 -->
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <!-- <distribution>repo</distribution> -->
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:https://github.com/nsmeng3/lazyegg-framework.git</connection>
+    <developerConnection>scm:https://github.com/nsmeng3/lazyegg-framework.git</developerConnection>
+    <url>https://github.com/nsmeng3/lazyegg-framework.git</url>
+  </scm>
+  <developers>
+    <developer>
+      <name>DifferentW</name>
+      <email>dev@lazyegg.io</email>
+      <organization>https://github.com/nsmeng3</organization>
+      <timezone>+8</timezone>
+    </developer>
+  </developers>
 
   <properties>
     <java.version>1.8</java.version>
@@ -28,7 +42,7 @@
 
     <skip.springboot.maven>false</skip.springboot.maven>
 
-    <spring-boot.version>2.7.16</spring-boot.version>
+    <spring-boot.version>2.7.18</spring-boot.version>
     <spring-cloud.version>2020.0.6</spring-cloud.version>
     <cola.version>4.3.0</cola.version>
     <cola.components.version>4.3.1</cola.components.version>
@@ -60,6 +74,7 @@
     <knife4j-openapi2.version>4.0.0</knife4j-openapi2.version>
     <guava-retrying.version>2.0.0</guava-retrying.version>
     <jasypt-spring-boot-starter.version>2.1.2</jasypt-spring-boot-starter.version>
+    <httpclient.version>4.5.14</httpclient.version>
   </properties>
 
   <dependencyManagement>
@@ -220,23 +235,29 @@
         <artifactId>jasypt-spring-boot-starter</artifactId>
         <version>${jasypt-spring-boot-starter.version}</version>
       </dependency>
-
-      <!-- lazyegg 自身依赖 -->
       <dependency>
-        <groupId>io.lazyegg</groupId>
-        <artifactId>lazyegg-bom</artifactId>
-        <version>1.0.2</version>
+        <groupId>com.fasterxml.jackson</groupId>
+        <artifactId>jackson-bom</artifactId>
+        <version>2.16.1</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <!-- <dependency> -->
+      <!--   <groupId>org.springframework.security</groupId> -->
+      <!--   <artifactId>spring-security-bom</artifactId> -->
+      <!--   <version>5.7.11</version> -->
+      <!--   <type>pom</type> -->
+      <!--   <scope>import</scope> -->
+      <!-- </dependency> -->
+      <!-- lazyegg 自身依赖 -->
+      <!-- <dependency> -->
+      <!--   <groupId>io.lazyegg</groupId> -->
+      <!--   <artifactId>lazyegg-bom</artifactId> -->
+      <!--   <version>1.0.3</version> -->
+      <!--   <type>pom</type> -->
+      <!--   <scope>import</scope> -->
+      <!-- </dependency> -->
     </dependencies>
   </dependencyManagement>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>alimaven spring plugin</id>
-      <name>alimaven spring plugin</name>
-      <url>https://maven.aliyun.com/repository/spring-plugin</url>
-    </pluginRepository>
-  </pluginRepositories>
 </project>
