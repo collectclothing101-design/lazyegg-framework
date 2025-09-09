@@ -5,7 +5,7 @@
     <groupId>io.lazyegg</groupId>
     <artifactId>lazyegg-framework-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <name>lazyegg-framework</name>
     <description>Lazyegg Framework</description>
     <url>https://github.com/nsmeng3/lazyegg-framework.git</url>
@@ -177,7 +177,7 @@
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.5.0</version>
+                <version>0.8.0</version>
                 <extensions>true</extensions>
                 <configuration>
                     <publishingServerId>central</publishingServerId>
@@ -234,17 +234,17 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- <plugin> -->
-            <!--     <groupId>org.apache.maven.plugins</groupId> -->
-            <!--     <artifactId>maven-compiler-plugin</artifactId> -->
-            <!--     <version>3.5.1</version> -->
-            <!--     <configuration> -->
-            <!--         <source>${java.version}</source> -->
-            <!--         <target>${java.version}</target> -->
-            <!--         <testSource>${java.version}</testSource> -->
-            <!--         <testTarget>${java.version}</testTarget> -->
-            <!--     </configuration> -->
-            <!-- </plugin> -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <testSource>${java.version}</testSource>
+                    <testTarget>${java.version}</testTarget>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

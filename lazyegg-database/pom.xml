@@ -7,11 +7,13 @@
     <parent>
         <groupId>io.lazyegg</groupId>
         <artifactId>lazyegg-framework-parent</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>lazyegg-database</artifactId>
+    <groupId>io.lazyegg</groupId>
+    <version>1.0.4</version>
     <name>lazyegg-database</name>
     <description>lazyegg-database</description>
     <url>https://github.com/nsmeng3/lazyegg-framework/tree/main/lazyegg-database</url>

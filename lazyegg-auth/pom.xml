@@ -5,10 +5,12 @@
     <parent>
         <groupId>io.lazyegg</groupId>
         <artifactId>lazyegg-framework-parent</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </parent>
 
     <artifactId>lazyegg-auth</artifactId>
+    <groupId>io.lazyegg</groupId>
+    <version>1.0.4</version>
     <name>lazyegg-auth</name>
     <description>auth</description>
     <url>https://github.com/nsmeng3/lazyegg-framework/tree/main/lazyegg-auth</url>

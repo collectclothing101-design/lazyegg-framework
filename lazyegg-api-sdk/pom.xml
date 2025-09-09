@@ -7,10 +7,12 @@
     <parent>
         <groupId>io.lazyegg</groupId>
         <artifactId>lazyegg-framework-parent</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </parent>
 
     <artifactId>lazyegg-api-sdk</artifactId>
+    <groupId>io.lazyegg</groupId>
+    <version>1.0.4</version>
     <name>lazyegg-api-sdk</name>
     <description>api-sdk</description>
     <url>https://github.com/nsmeng3/lazyegg-framework/tree/main/lazyegg-api-sdk</url>
