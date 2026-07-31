@@ -4,9 +4,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.ObjectInputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,11 +30,24 @@ public class JavaCodeResetCmdExe {
     private void reset(String entityName) {
 
         String logFile = String.join(File.separator, "log", entityName + ".rl");
-        try {
-            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(logFile));
-            List<File> o = (List<File>) objectInputStream.readObject();
-            for (File file : o) {
+        File rlFile = new File(logFile);
+        if (!rlFile.exists()) {
+            log.warn("记录文件不存在: {}", logFile);
+            return;
+        }
 
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(new FileInputStream(rlFile), StandardCharsets.UTF_8))) {
+            List<File> files = new ArrayList<>();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                line = line.trim();
+                if (!line.isEmpty()) {
+                    files.add(new File(line));
+                }
+            }
+
+            for (File file : files) {
                 if (!file.exists()) {
                     log.warn("{}文件不存在", file);
                     continue;
@@ -42,11 +58,10 @@ public class JavaCodeResetCmdExe {
                     log.warn("{}删除异常", file.getAbsoluteFile());
                 }
             }
-            File rlFile = new File(logFile);
+
             if (rlFile.exists()) {
                 rlFile.delete();
             }
-            objectInputStream.close();
         } catch (Exception e) {
             log.warn("记录读取异常，撤销已生成代码操作无法进行", e);
         }
