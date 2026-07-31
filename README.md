@@ -57,10 +57,33 @@ result: 返回值，类型为 XXX。
 
 解决方案描述。
 
+## 安全改进 / Security Improvements
+
+### v1.0.1-SNAPSHOT (2026-07-31)
+
+#### 修复构建失败 / Build Fix
+- **问题**: `pom.xml` 中 `annotationProcessorPaths` 标签缺少闭合符号 `>`
+- **修复**: 修正 XML 语法错误，Maven 构建恢复正常
+- **Issue**: Malformed XML in `pom.xml` — missing closing `>` on `</annotationProcessorPaths>` tag
+- **Fix**: Corrected XML syntax, Maven build now passes successfully
+
+#### 修复不安全反序列化漏洞 / Unsafe Deserialization Fix (CWE-502)
+- **问题**: `JavaCodeResetCmdExe.java` 使用 `ObjectInputStream` 反序列化不受信任的数据，存在远程代码执行风险
+- **修复**: 将 `ObjectInputStream` 替换为 `BufferedReader`，以安全的文本格式读取文件路径
+- **影响**: 消除 CWE-502（反序列化不受信任数据）漏洞
+- **Issue**: `JavaCodeResetCmdExe.java` used `ObjectInputStream.readObject()` to deserialize untrusted data, risking remote code execution
+- **Fix**: Replaced `ObjectInputStream` with `BufferedReader` to read file paths as plain text
+- **Impact**: Eliminates CWE-502 (Deserialization of Untrusted Data) vulnerability
+
+#### 文件变更 / Files Changed
+- `pom.xml` — XML 语法修复
+- `lazyegg-dependencies/pom.xml` — 版本更新至 1.0.1-SNAPSHOT
+- `lazyegg-plugin-generator/src/main/java/io/lazyegg/boot/plugins/generator/app/excutor/JavaCodeResetCmdExe.java` — 安全修复
+
 ## 版本历史
 
+- v1.0.1-SNAPSHOT (2026-07-31): 修复构建失败和不安全反序列化漏洞 (CWE-502)。
 - v1.0.0 (2022-01-01): 初始版本。
-- v1.1.0 (2022-02-01): 增加了 XXX 功能。
 
 ## 贡献指南
 
